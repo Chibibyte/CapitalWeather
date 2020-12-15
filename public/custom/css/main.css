@@ -1,0 +1,337 @@
+.custom_popup *{
+  text-shadow: 0 0 3px black;
+  color:white;
+}
+
+#menuTopRight{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cityselect-defaultOption{
+  display:none;
+}
+
+.weather_entry{
+  display:flex;
+  align-items: center;
+  /* background:red; */
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  padding: 0 1rem 0 1rem;
+}
+
+.weather_entry:not(:last-child){
+  margin-bottom: 0.8rem;
+}
+
+.weather_entry:hover{
+  background:rgba(245, 239, 239, 0.541);
+}
+
+.weather_entry.skyTempDiv{
+  display:flex;
+}
+
+
+
+.weather_entry.skyTempDiv *{
+  margin:0 !important;
+  padding:0 !important;
+}
+
+.weather_entry.skyTempDiv > *{
+  margin-right: 0.5rem !important;
+}
+
+.weather_entry .weather_entry_data{
+  /* border: 3px black solid; */
+  margin: 0;
+  padding: 0;
+}
+
+.weather_entry .weather_entry_data span{
+  display:flex;
+  align-items: center;
+}
+
+.weather_entry p.weather_entry_data{
+  margin-left: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  /* text-shadow: 0 0 3px white; */
+  
+}
+
+#countdown {
+    z-index: 10;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #countdown #countdown-container {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      font-size: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #countdown #countdown-container::after{
+        position: fixed;
+        z-index:-1;
+        content:"";
+        width:50px;
+        height:50px;
+        background:rgba(0, 0, 0, 0.479);
+      }
+      #countdown #countdown-container * {
+        padding: 0;
+        margin: 0; }
+      #countdown #countdown-container p {
+        color: white;
+        font-size: 25px; 
+        font-weight: 600;}
+        #countdown #countdown-container p.countdown-p-value {
+          /* font-family: 'Times New Roman', Times, serif; */
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          text-shadow: 0px 0px 2px black; }
+      #countdown #countdown-container .balloon_anim_unit {
+        position: absolute;
+        text-shadow: 0 0 4px  orange; }
+        #countdown #countdown-container .balloon_anim_unit.anim_sun_1 {
+          z-index: 1;
+          color: white;
+          animation: rotate360 12s infinite linear; }
+        #countdown #countdown-container .balloon_anim_unit.anim_sun_2 {
+          z-index: 2;
+          color: yellow;
+          animation: rotate360 8s infinite linear reverse; }
+
+          .coordScaling, .coordShifting {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            width: 800px;
+            height: 150px;
+            background: white;
+            border: 3px red solid;
+            border-radius: 8px;
+            padding: 0;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: none; }
+            .coordScaling.coordShifting, .coordShifting.coordShifting {
+              left: 900px; }
+            .coordScaling .sScale, .coordShifting .sScale {
+              display: flex;
+              width: 80%;
+              color: black; }
+              .coordScaling .sScale > *, .coordShifting .sScale > * {
+                display: block; }
+              .coordScaling .sScale input, .coordShifting .sScale input {
+                width: 80%;
+                margin-right: 1rem; }
+          
+
+
+          .material-icons {
+            transition: font-size 0.25s, transform 0.25s; }
+          
+          /* Rules for sizing the icon. */
+          .material-icons.md-12 {
+            font-size: 12px; }
+          
+          .material-icons.md-18 {
+            font-size: 18px; }
+          
+          .material-icons.md-24 {
+            font-size: 24px; }
+          
+          .material-icons.md-36 {
+            font-size: 36px; }
+          
+          .material-icons.md-48 {
+            font-size: 48px; }
+          
+          .material-icons.md-88 {
+            font-size: 88px; }
+          
+          .material-icons.md-96 {
+            font-size: 96px; }
+          
+          .material-icons.md-102 {
+            font-size: 102px; }
+          
+          .material-icons.md-108 {
+            font-size: 108px; }
+          
+          /* Rules for using icons as black on a light background. */
+          .material-icons.md-dark {
+            color: rgba(0, 0, 0, 0.54); }
+          
+          .material-icons.md-dark.md-inactive {
+            color: rgba(0, 0, 0, 0.26); }
+          
+          /* Rules for using icons as white on a dark background. */
+          .material-icons.md-light {
+            color: white; }
+          
+          .material-icons.md-light.md-inactive {
+            color: rgba(255, 255, 255, 0.3); }
+
+            .barColor-temperature {
+              color: #e71414; }
+              .barColor-temperature.animate {
+                animation: freeze 8s ease-out infinite; }
+            
+            .barColor-airpressure {
+              color: #36a2eb; }
+              .barColor-airpressure.animate {
+                animation: expand 3s ease-in-out infinite alternate; }
+            
+            .barColor-humidity {
+              color: #56c1ff; }
+              .barColor-humidity.animate {
+                animation: drop 5s linear infinite; }
+            
+            .barColor-wind {
+              color: #4bc0c0; }
+              .barColor-wind.animate {
+                animation: rotate360 4s infinite linear;
+                animation-fill-mode: forwards; }
+            
+            .barColor-rain {
+              color: rgb(130, 164, 170); }
+              .barColor-rain.animate {
+                animation: mirror 0.2s steps(1) infinite; }
+            
+            .barColor-visibility {
+              color: #ff9f40; }
+              .barColor-visibility.animate {
+                animation: blendInOut 3s infinite alternate linear;
+                animation-fill-mode: forwards; }
+
+
+            .md-animation-rotateZ {
+                transform: rotateZ(45deg); }
+              
+              @keyframes rotate360 {
+                from {
+                  transform: rotate(0deg); }
+                to {
+                  transform: rotate(-360deg); } }
+              
+              @keyframes blendInOut {
+                from {
+                  opacity: 100; }
+                to {
+                  opacity: 0; } }
+              
+              @keyframes mirror {
+                0% {
+                  transform: scaleX(1); }
+                50% {
+                  transform: scaleX(-1); }
+                100% {
+                  transform: scaleX(1); } }
+              
+              @keyframes freeze {
+                from {
+                  transform: scale(0, 0); }
+                to {
+                  transform: scale(1, 1); } }
+              
+              @keyframes expand {
+                from {
+                  transform: scale(1, 1); }
+                to {
+                  transform: scale(1.2, 0.8); } }
+              
+              @keyframes drop {
+                0% {
+                  transform: scale(0.8, 1.1) translate(0, -50%); }
+                25% {
+                  transform: scale(1.1, 0.85) translate(0, 0); }
+                50% {
+                  transform: scale(1.2, 0.75); }
+                100% {
+                  transform: scale(1, 1); } }
+
+
+                  #touchInfoButton {
+                    position: fixed;
+                    z-index: 1000;
+                    /* top: 8rem; */
+                    top:1rem;
+                    right:50%;
+                    /* right: 2rem; */
+                    width: 4rem;
+                    height: 4rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    background: orange;
+                    border: 3px solid white;
+                    color: white;
+                    font-size: 2rem; 
+                  box-shadow: 1px 1px black;}
+
+                    #touchInfoButton:hover{
+                      background: rgb(255, 187, 0);
+                    }
+                  
+                  .modalWrapper {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 1005;
+                    width: 100vw;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(255, 255, 255, 0.5); 
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;}
+                    .modalWrapper .modal {
+                      position: relative;
+                      padding: 1rem;
+                      background: rgba(0, 0, 0, 0.753);
+                      width: max-content;
+                      height: max-content;
+                      border-radius: 8px;
+                      border: 1px solid white;
+                      color: white;
+                      display: initial;
+                      text-align: center; }
+                      .modalWrapper .modal .confirmButtonWrapper {
+                        width: 100%;
+                        height: 20%;
+                        text-align: center; }
+                        .modalWrapper .modal .confirmButtonWrapper .confirmButton {
+                          width: 4rem;
+                          height: 4rem;
+                          border-radius: 50%;
+                          font-size: large; }
+                      .modalWrapper .modal p {
+                        margin-bottom: 1rem;
+                        width: max-content;
+                        height: max-content; }
+                        .modalWrapper .modal p a{
+                          color: wheat;
+                        }
+                  
+                  .hidden {
+                    display: none; }
